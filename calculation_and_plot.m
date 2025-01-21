@@ -37,8 +37,8 @@ plot(speed, v_2, "b", "LineWidth",2)
 plot(speed, v_4, ".-")
 plot(speed, v_2_3_10, "r--")
 
-plot(speed, stop_distance_1s)
-plot(speed, stop_distance_0s)
+plot(speed, stop_distance_1s, "g*-")
+plot(speed, stop_distance_0s, "o-")
 
 legend([...
     "Halber Tacho (Richtwert)", ...
@@ -49,3 +49,4 @@ legend([...
     ],...
     "Location","northwest")
 
+set(gcf,'units','centimeters','position',[5,5, 12,18]);  % set size
