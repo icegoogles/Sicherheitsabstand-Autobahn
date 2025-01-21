@@ -32,6 +32,7 @@ stop_distance_0s = ...
 %% Plot
 figure(1); clf; grid on; hold on;
 xlabel("Geschwindigkeit [km/h]"); ylabel("Abstand [m]");
+ylim([0, 200]);
 
 plot(speed, v_2, "b", "LineWidth",2)
 plot(speed, v_4, ".-")
@@ -39,6 +40,8 @@ plot(speed, v_2_3_10, "r--")
 
 plot(speed, stop_distance_1s, "g*-")
 plot(speed, stop_distance_0s, "o-")
+
+xline(130, "k--")  % Richtgeschwindigkeit
 
 legend([...
     "Halber Tacho (Richtwert)", ...
